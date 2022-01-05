@@ -1,4 +1,4 @@
-package component;
+package pets.tracker.component;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.KeyNotifier;
 import com.vaadin.flow.component.button.Button;
@@ -9,10 +9,10 @@ import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
 
-import domain.Item;
+import pets.tracker.domain.Item;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
-import repo.ItemRepo;
+import pets.tracker.repo.ItemRepo;
 
 
 @SpringComponent

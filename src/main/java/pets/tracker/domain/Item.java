@@ -1,4 +1,4 @@
-package domain;
+package pets.tracker.domain;
 
 import lombok.Data;
 import javax.persistence.Entity;
