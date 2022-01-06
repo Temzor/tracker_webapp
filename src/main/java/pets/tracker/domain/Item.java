@@ -4,7 +4,8 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Data
@@ -12,9 +13,8 @@ public class Item {
     @Id
     @GeneratedValue
     private Long id;
-    private com.vaadin.flow.component.datepicker.DatePicker created = new com.vaadin.flow.component.datepicker.DatePicker();
 
-//    private Timestamp created;
+    Date created = java.sql.Date.valueOf(LocalDate.now());
     private String companyName;
     private String status;
     private Integer sla = null;

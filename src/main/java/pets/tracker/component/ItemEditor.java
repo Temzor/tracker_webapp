@@ -15,6 +15,7 @@ import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import pets.tracker.repo.ItemRepo;
 
+import java.time.LocalDate;
 
 
 @SpringComponent
@@ -24,7 +25,7 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
 
     private Item item;
 
-    private TextField created = new TextField("", "Company name");
+
     private TextField companyName = new TextField("", "Company name");
     private TextField status = new TextField("", "Status");
     private IntegerField sla = new IntegerField("", "SLA");
@@ -46,6 +47,11 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
     @Autowired
     public ItemEditor(ItemRepo itemRepo) {
         this.itemRepo = itemRepo;
+        DatePicker created = new DatePicker();
+        created.setLabel("Select a start date");
+        created.setPlaceholder(String.valueOf(LocalDate.now()));
+        created.setClearButtonVisible(true);
+
 
         add(created, companyName, status, sla, description, buttons);
 
@@ -57,6 +63,8 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
         delete.getElement().getThemeList().add("error");
 
         addKeyPressListener(Key.ENTER, e -> save());
+
+
 
         save.addClickListener(e -> save());
         delete.addClickListener(e -> delete());
