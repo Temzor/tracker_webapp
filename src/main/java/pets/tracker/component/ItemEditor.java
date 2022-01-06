@@ -2,17 +2,19 @@ package pets.tracker.component;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.KeyNotifier;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.textfield.IntegerField;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
-
 import pets.tracker.domain.Item;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import pets.tracker.repo.ItemRepo;
+
 
 
 @SpringComponent
@@ -22,10 +24,10 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
 
     private Item item;
 
-    private TextField created = new TextField("", "Date created");
+    private TextField created = new TextField("", "Company name");
     private TextField companyName = new TextField("", "Company name");
     private TextField status = new TextField("", "Status");
-    private TextField sla = new TextField("", "SLA");
+    private IntegerField sla = new IntegerField("", "SLA");
     private TextField description = new TextField("", "Description");
 
     private Button save = new Button("Save");
@@ -89,5 +91,6 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
         setVisible(true);
 
         companyName.focus();
+
     }
 }
