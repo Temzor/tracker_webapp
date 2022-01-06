@@ -2,7 +2,7 @@ package pets.tracker.component;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.KeyNotifier;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.datepicker.DatePicker;
+import com.vaadin.flow.component.datetimepicker.DateTimePicker;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.IntegerField;
@@ -15,7 +15,8 @@ import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import pets.tracker.repo.ItemRepo;
 
-import java.time.LocalDate;
+import java.time.Duration;
+import java.time.LocalDateTime;
 
 
 @SpringComponent
@@ -47,11 +48,11 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
     @Autowired
     public ItemEditor(ItemRepo itemRepo) {
         this.itemRepo = itemRepo;
-        DatePicker created = new DatePicker();
-        created.setLabel("Select a start date");
-        created.setPlaceholder(String.valueOf(LocalDate.now()));
-        created.setClearButtonVisible(true);
 
+        DateTimePicker created = new DateTimePicker();
+        created.setLabel("Message received");
+        created.setStep(Duration.ofSeconds(1));
+        created.setValue(LocalDateTime.now());
 
         add(created, companyName, status, sla, description, buttons);
 
