@@ -2,12 +2,10 @@ package pets.tracker.view;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
-import com.vaadin.flow.component.grid.GridSortOrder;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
-import com.vaadin.flow.data.provider.SortDirection;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.Theme;
@@ -16,9 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import pets.tracker.domain.Item;
 import pets.tracker.repo.ItemRepo;
 import pets.tracker.component.ItemEditor;
-
-import java.util.Comparator;
-
 
 @Route("")
 @Theme(value = Lumo.class, variant = Lumo.DARK)
