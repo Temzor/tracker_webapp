@@ -30,9 +30,9 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
 
 
     private TextField companyName = new TextField("", "Company name");
+    TextField phoneNumber = new TextField("", "Phone number");
     private ComboBox<Integer> sla = new ComboBox<>();
     private ComboBox<String> force = new ComboBox<>();
-    private TextField phoneNumber = new TextField("", "Phone number");
     private TextArea description = new TextArea("", "Description");
 
 
@@ -59,8 +59,9 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
         created.setStep(Duration.ofSeconds(1));
         created.setValue(LocalDateTime.now());
 
-       phoneNumber.setPattern("^[+][0-9]{1}?[(]?[0-9]{3}[)]?[0-9]{3}[-s.]?[0-9]{4,6}$");
-       phoneNumber.setHelperText("Format: +7(123)456-7890");
+
+        phoneNumber.setPattern("^[+]?[0-9]{1}?[(]?[0-9]{3}[)]?[-s.]?[0-9]{3}[-s.]?[0-9]{4}$");
+        phoneNumber.setHelperText("Format: +7(123)456-7890");
 
         description.setLabel("Description");
         description.setWidthFull();
