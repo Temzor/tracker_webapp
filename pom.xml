@@ -14,7 +14,7 @@
     <name>tracker_webapp</name>
     <description>tracker_webapp</description>
     <properties>
-        <java.version>16</java.version>
+        <java.version>17</java.version>
         <vaadin.version>14.8.1</vaadin.version>
     </properties>
     <dependencies>
