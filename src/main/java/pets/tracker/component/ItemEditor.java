@@ -28,13 +28,11 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
 
     private Item item;
 
-
     private TextField companyName = new TextField("", "Company name");
     TextField phoneNumber = new TextField("", "Phone number");
     private ComboBox<Integer> sla = new ComboBox<>();
     private ComboBox<String> force = new ComboBox<>();
     private TextArea description = new TextArea("", "Description");
-
 
     private Button save = new Button("Save");
     private Button cancel = new Button("Cancel");
