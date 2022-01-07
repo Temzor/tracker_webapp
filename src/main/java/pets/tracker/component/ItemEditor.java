@@ -2,6 +2,7 @@ package pets.tracker.component;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.KeyNotifier;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.datetimepicker.DateTimePicker;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -32,8 +33,8 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
 
 
     private TextField companyName = new TextField("", "Company name");
-    private TextField status = new TextField("", "Status");
-    private IntegerField sla = new IntegerField("", "SLA");
+    ComboBox<Integer> sla = new ComboBox<>();
+    ComboBox<String> force = new ComboBox<>();
     TextField phoneNumber = new TextField("", "Phone number");
     TextArea description = new TextArea("", "Description");
 
@@ -60,7 +61,7 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
         created.setStep(Duration.ofSeconds(1));
         created.setValue(LocalDateTime.now());
 
-       phoneNumber.setPattern("^[+]7?[(]?[0-9]{3}[)]?[0-9]{3}[-s.]?[0-9]{4,6}$");
+       phoneNumber.setPattern("^[+][0-9]{1}?[(]?[0-9]{3}[)]?[0-9]{3}[-s.]?[0-9]{4,6}$");
        phoneNumber.setHelperText("Format: +7(123)456-7890");
 
         description.setLabel("Description");
@@ -72,7 +73,16 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
         });
         description.setValue("Great job. This is excellent!");
 
-         add(created, companyName, status, sla, phoneNumber, description, buttons);
+
+        force.setItems("Trivial", "Normal", "Major", "Critical", "Blocker");
+        force.setPlaceholder("Select force");
+        force.setClearButtonVisible(false);
+
+        sla.setItems(1, 3, 6, 12, 24, 72);
+        sla.setPlaceholder("Select SLA in hours");
+        sla.setClearButtonVisible(false);
+
+        add(created, companyName, force, sla, phoneNumber, description, buttons);
 
         binder.bindInstanceFields(this);
 
