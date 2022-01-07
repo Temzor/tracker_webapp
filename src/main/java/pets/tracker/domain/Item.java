@@ -16,7 +16,7 @@ public class Item {
     @Id
     @GeneratedValue
     private Long id;
-    Timestamp created = Timestamp.valueOf(LocalDateTime.now());
+    private Timestamp created = Timestamp.valueOf(LocalDateTime.now());
     private String companyName;
     private String force;
     private Integer sla = null;

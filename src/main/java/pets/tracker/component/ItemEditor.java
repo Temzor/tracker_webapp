@@ -2,11 +2,11 @@ package pets.tracker.component;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.KeyNotifier;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.datetimepicker.DateTimePicker;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.textfield.IntegerField;
 import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.Binder;
@@ -17,10 +17,7 @@ import pets.tracker.domain.Item;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import pets.tracker.repo.ItemRepo;
-
-import java.sql.Timestamp;
 import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
@@ -33,16 +30,17 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
 
 
     private TextField companyName = new TextField("", "Company name");
-    ComboBox<Integer> sla = new ComboBox<>();
-    ComboBox<String> force = new ComboBox<>();
-    TextField phoneNumber = new TextField("", "Phone number");
-    TextArea description = new TextArea("", "Description");
+    private ComboBox<Integer> sla = new ComboBox<>();
+    private ComboBox<String> force = new ComboBox<>();
+    private TextField phoneNumber = new TextField("", "Phone number");
+    private TextArea description = new TextArea("", "Description");
 
 
     private Button save = new Button("Save");
     private Button cancel = new Button("Cancel");
     private Button delete = new Button("Delete");
     private HorizontalLayout buttons = new HorizontalLayout(save, cancel, delete);
+
 
     private Binder<Item> binder = new Binder<>(Item.class);
     @Setter
@@ -128,6 +126,5 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
         setVisible(true);
 
         companyName.focus();
-
     }
 }
