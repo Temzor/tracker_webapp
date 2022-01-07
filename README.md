@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/Temzor/tracker_webapp/branch/master/graph/badge.svg?token=jhCpwXsgLh)](https://codecov.io/gh/Temzor/job4j_grabber)
+[![codecov](https://codecov.io/gh/Temzor/tracker_webapp/branch/master/graph/badge.svg?token=jhCpwXsgLh)](https://codecov.io/gh/Temzor/tracker_webapp)
 [![Java CI with Maven](https://github.com/Temzor/tracker_webapp/actions/workflows/maven.yml/badge.svg)](https://github.com/Temzor/job4j_grabber/actions/workflows/maven.yml)
 
 ### Описание:
