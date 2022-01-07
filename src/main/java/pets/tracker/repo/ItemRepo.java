@@ -10,7 +10,7 @@ import java.util.List;
 public interface ItemRepo extends JpaRepository<Item, Long> {
     @Query("from Item i "
             + " where concat(i.created, ' ', i.companyNa" +
-            "me, ' ', i.status, ' ',i.sla , ' ', i.description) "
+            "me, ' ', i.status, ' ',i.sla , ' ', i.phoneNumber , ' ', i.description) "
             +   "like concat('%', :name, '%') ")
 
     List<Item> findByName(@Param("name") String name);

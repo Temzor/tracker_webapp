@@ -6,8 +6,10 @@ import com.vaadin.flow.component.datetimepicker.DateTimePicker;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.IntegerField;
+import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.Binder;
+import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
 import pets.tracker.domain.Item;
@@ -15,7 +17,9 @@ import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import pets.tracker.repo.ItemRepo;
 
+import java.sql.Timestamp;
 import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
@@ -30,7 +34,9 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
     private TextField companyName = new TextField("", "Company name");
     private TextField status = new TextField("", "Status");
     private IntegerField sla = new IntegerField("", "SLA");
-    private TextField description = new TextField("", "Description");
+    TextField phoneNumber = new TextField("", "Phone number");
+    TextArea description = new TextArea("", "Description");
+
 
     private Button save = new Button("Save");
     private Button cancel = new Button("Cancel");
@@ -54,7 +60,19 @@ public class ItemEditor extends VerticalLayout implements KeyNotifier {
         created.setStep(Duration.ofSeconds(1));
         created.setValue(LocalDateTime.now());
 
-        add(created, companyName, status, sla, description, buttons);
+       phoneNumber.setPattern("^[+]7?[(]?[0-9]{3}[)]?[0-9]{3}[-s.]?[0-9]{4,6}$");
+       phoneNumber.setHelperText("Format: +7(123)456-7890");
+
+        description.setLabel("Description");
+        description.setWidthFull();
+        description.setMaxLength(900);
+        description.setValueChangeMode(ValueChangeMode.EAGER);
+        description.addValueChangeListener(e -> {
+            e.getSource().setHelperText(e.getValue().length() + "/" + 900);
+        });
+        description.setValue("Great job. This is excellent!");
+
+         add(created, companyName, status, sla, phoneNumber, description, buttons);
 
         binder.bindInstanceFields(this);
 
