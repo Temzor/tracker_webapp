@@ -37,6 +37,7 @@ CMR- система для фиксации обращении от пользо
 
 #### Интерфейс создания заявки:
 1) Кнопка создания заявки:
+
 ![Создание заявки](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_1.png)
 2) Поле Дата/Время, заполняется автоматически(можно изменить) текущем временем согласно UTC.
 ![Поле Дата/Время](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_DateTime.png)
