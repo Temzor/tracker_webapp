@@ -39,23 +39,40 @@ CMR- система для фиксации обращении от пользо
 1) Кнопка создания заявки:
 
 ![Создание заявки](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_1.png)
+
 2) Поле Дата/Время, заполняется автоматически(можно изменить) текущем временем согласно UTC.
+
 ![Поле Дата/Время](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_DateTime.png)
+
 3) Поле "Название компании":
+
 ![Поле "Название компании"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_CompanyName.png)
+
 4) Поле "Влияние на бизнес-процессы", согласно определению в ITIL (https://habr.com/ru/company/muk/blog/265229/):
+
 ![Поле "Влияние на бизнес-процессы"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_Force.png)
+
 5) Поле "Время договорных сроков SLA в часах"(https://habr.com/ru/company/dcmiran/blog/468825/):
+
 ![Поле "Время договорных сроков SLA в часах](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_SLA.png)
+
 6) Поле "Номер телефона":
+
 ![Поле "Номер телефона"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_PhoneNumber.png)
+
 7) Поле "Описание обращения":
+
 ![Поле "Описание обращения"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_Description.png)
 
 #### Кнопки действий над полями обращения:
 1) Кнопка "Save", необходима для сохранения или изменения обращения:
+
 ![Кнопка "Save"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Button_Save.png)
+
 2) Кнопка "Cancel", необходима для отмены изменений обращения:
+
 ![Кнопка "Cancel"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Button_Cancel.png)
+
 3) Кнопка "Delete", необходима для удаления обращения при изменении или создании обращения:
+
 ![Кнопка "Delete"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Button_Delete.png)
