@@ -36,43 +36,43 @@ CRM - система для фиксации обращении от польз�
 ![Фильтры ASC DESC](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Filters_2.png)
 
 #### Интерфейс создания заявки:
-1) Кнопка создания заявки:
+1) Кнопка "New application" - "Cоздания заявки":
 
-![Создание заявки](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_1.png)
+![Кнопка "New application" - "Cоздания заявки"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_1.png)
 
 2) Поле Дата/Время, заполняется автоматически(можно изменить) текущем временем согласно UTC.
 
 ![Поле Дата/Время](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_DateTime.png)
 
-3) Поле "Название компании":
+3) Поле "Company name" - "Название компании":
 
-![Поле "Название компании"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_CompanyName.png)
+![ Поле "Company name" - "Название компании"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_CompanyName.png)
 
-4) Поле "Влияние на бизнес-процессы", согласно определению в ITIL (https://habr.com/ru/company/muk/blog/265229/):
+4) Поле "Select force" - "Влияние на бизнес-процессы", согласно определению в ITIL (https://habr.com/ru/company/muk/blog/265229/):
 
-![Поле "Влияние на бизнес-процессы"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_Force.png)
+![Поле "Select force" - "Влияние на бизнес-процессы"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_Force.png)
 
-5) Поле "Время договорных сроков SLA в часах"(https://habr.com/ru/company/dcmiran/blog/468825/):
+5) Поле "Select SLA in hours" - "Время договорных сроков SLA в часах" (https://habr.com/ru/company/dcmiran/blog/468825/):
 
-![Поле "Время договорных сроков SLA в часах](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_SLA.png)
+![Поле "Select SLA in hours" - "Время договорных сроков SLA в часах"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_SLA.png)
 
-6) Поле "Номер телефона":
+6) Поле "Phone number" - "Номер телефона":
 
-![Поле "Номер телефона"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_PhoneNumber.png)
+![Поле "Phone number" - "Номер телефона"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_PhoneNumber.png)
 
-7) Поле "Описание обращения":
+7) Поле "Description" - "Описание обращения":
 
-![Поле "Описание обращения"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_Description.png)
+![Поле "Description" - "Описание обращения"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Created_Description.png)
 
 #### Кнопки действий над полями обращения:
-1) Кнопка "Save", необходима для сохранения или изменения обращения:
+1) Кнопка "Save" - "Сохранить", необходима для сохранения или изменения обращения:
 
-![Кнопка "Save"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Button_Save.png)
+![Кнопка "Save"  - "Сохранить"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Button_Save.png)
 
-2) Кнопка "Cancel", необходима для отмены изменений обращения:
+2) Кнопка "Cancel" - "Отмена", необходима для отмены изменений обращения:
 
-![Кнопка "Cancel"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Button_Cancel.png)
+![Кнопка "Cancel" - "Отмена"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Button_Cancel.png)
 
-3) Кнопка "Delete", необходима для удаления обращения при изменении или создании обращения:
+3) Кнопка "Delete" - "Удалить", необходима для удаления обращения при изменении или создании обращения:
 
-![Кнопка "Delete"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Button_Delete.png)
+![Кнопка "Delete" - "Удалить"](https://github.com/Temzor/tracker_webapp/blob/master/src/Images/Button_Delete.png)
