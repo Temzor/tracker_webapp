@@ -2,7 +2,7 @@
 [![Java CI with Maven](https://github.com/Temzor/tracker_webapp/actions/workflows/maven.yml/badge.svg)](https://github.com/Temzor/job4j_grabber/actions/workflows/maven.yml)
 
 ### Описание:
-CMR- система для фиксации обращении от пользователя. В идеальном состоянии будет выглядеть так. \
+CRM - система для фиксации обращении от пользователя. В идеальном состоянии будет выглядеть так. \
 Уже сделано:
 * UI
 * Базовое окно заведения заявок с полями. 
